@@ -22,12 +22,11 @@ function submitData(name, email) {
       })
       .then(function(object) {
         console.log(object)
-        console.log(object.id)
         appendTextToBody(object.id)
       })
       .catch(function(error) {
           alert("U aren't supposed to be here bruh");
-          console.log(error.message);
+          appendTextToBody(error.message);
       }); 
 }
 
@@ -40,3 +39,5 @@ function submitData(name, email) {
 function appendTextToBody(text) {
     document.body.innerHTML = text
 }
+
+submitData("taylor", "t@gmail.com")
