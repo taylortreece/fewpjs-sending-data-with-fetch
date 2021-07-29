@@ -25,7 +25,6 @@ function submitData(name, email) {
         appendTextToBody(object.id)
       })
       .catch(function(error) {
-          alert("U aren't supposed to be here bruh");
           appendTextToBody(error.message);
       }); 
 }
